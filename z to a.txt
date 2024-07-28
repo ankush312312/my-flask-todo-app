@@ -1,0 +1,132 @@
+virtual enviorment create kiya
+pip install flask 
+
+
+multiple terminal bna skte h aur unme switch kr skte
+ 2 bna dete neeche: ek sare package install krne k liye, ek apni application ko run krne k liye
+
+
+app1
+    5000
+app2
+    8000
+    8000/products
+2 directories k bare me btate h(spelling v glt mt likhna dono folder bnate time): 1) static 2) templates
+    static
+        static k under koi v ek file dal dete h e.g-video,img,audio,txt,ipynb,csv,xlsx,pdf etc... anything
+        let's hmne img dal di h ek 
+        8000/static/picture_meri_wali.png
+        ye link kholte hi file download hone lgegi meri
+
+        to kul mila k bat ye h ki static directories, as it is apki files ko surve krne ki kam ati hi
+        static directories k under apni static files ko dalte h  
+    templates
+        templates folder kam ata h hmare templates ko dalne k kam
+        e.g- hm abhi html template dal k dekhege
+        mana templates k under hmne index.html dali 
+        app3
+        8000
+        ab to 8000 me bina slash(/) diye hi index.html direct render ho gyi h 
+
+
+ab dekhege ki kese templates k under hm apni beautiful html dal skte h 
+    bootstrap ka starter template dale index.html m
+    app4
+    8000
+    index.html me navbar jodi bootstrap ki 
+    navbar ko thoda customize kiya
+    forms v jode
+    table v jodi
+    app4
+    8000
+
+ek database bnate h
+    app5 me bnate is bar 
+    pehele to flask me flask SQLAlchemy package ko install kro
+    terminal me pip install flask-sqlalchemy
+app6  + index2.html 
+flask tut2
+new folder + new1.py +index1.html
+apne form ko working bnate h
+    new2.py and index2.html
+
+ new folder 2
+ delete joda aur thoda bhut kam v 
+
+ new folder 3
+    phle  hm esa kuch krte form me ki jb kuch v na ho to hm ek msg display krna chahte h wha p
+    index.html me jake kr jinja if se
+    if length = 0 to no record
+    in != 0 ko table show kr 
+    mtlb puri table ko kat fat kar k else me ghusa dete h 
+new folder 4    
+    ab upadate ki end point bnate flask file me 
+    usse phle ek html template bna lete ek aur update.html
+
+    usse phle ek topic smzte 
+    template inheritence (jinja m ):- 
+        Template inheritance Jinja2 ka ek mahatvapurn feature hai,
+         jo aapki HTML code ko adhik sangathit aur prabandhaniya bana sakta hai.
+         Iska mukhya uddeshya code ke punah prayog ko badhava dena hai.
+         Udaharan ke liye, maan lijiye ki aapke paas 100 pages hain aur
+         har page mein ek hi tarah ka navbar hai. Agar aapko navbar mein
+         koi chhota sa badlav karna ho, to aapko 100 files mein ja kar ise
+         badalne ki zarurat nahi hogi. Template inheritance ki madad se aap aisa kar sakte hain.
+
+         Template Inheritance kya hai?
+         Template inheritance ka matlab hai ki aap ek base template banate
+         hain jismein sabhi samanay HTML structure hote hain, jaise ki navbar,
+         header, footer, etc. Phir aap anya templates mein is base template
+         ko inherit karte hain aur keval ve hise badalte hain jo alag hote hain.
+
+         to ek base.html bnate h
+         sirf ek nhi jitni mrji base templates bna skte h
+
+         ab krte update end point banne wala kam new3.py me
+
+
+         ager cahhte ho update delete k time page reload na ho to pagex lga skte h 
+         sarch filter sab kuch lga skte h   
+
+new folder 5
+    ab heroku per deploy krte h 
+        heroku me sign up kiya h
+        heroku ko use krne ka mza heroku cli se h to
+        heroku cli install  
+
+    phle pip install gunicorn krte h usse hota ye h ki hm apni application ko multiple threads m surve kr skte h 
+        Gunicorn install karne se hamaari Flask application ko multiple threads
+        me serve karne ki capability mil jaati hai. Iska matlab hai ki Gunicorn 
+        ek process me multiple worker threads create karta hai, jo ek hi time pe 
+        multiple requests handle kar sakte hain. Yeh scalability aur performance 
+        improve karta hai, especially jab application pe zyada load ho
+    phle requirement ko freeze kr dete h mtlb pip freeze > requirements.txt   
+      krke requirements.txt file bna detee h
+
+    ek file bnate h Procfile
+       heroku use krta h is file ko, to deploy the application  
+
+       ab procfile k under likhte web:gunicorn app:app 
+       iska mtlb ye h  ki hmari app.py ko execute kr do 
+       ab debug = true ki jarurat nhi h to use hata skte h but rhne de abhi 
+
+       static k under js folder bn k useke ander test.js bnayi 
+       fir base.html m jurl (jinja url) ka istemal krke js file ki script dete
+       similarly css file v likh skte h 
+
+       heroku cli v install ho chuka h 
+       terminal me
+       heroku-> enter
+       heroku login -> enter
+       heroku m login ho chuke h 
+
+
+       ab ek git repository initialize krege
+       git install kr le phle
+       terminal me
+       git init -> enter
+       git add . -> enter
+       git commit -m "Initial commit" -> enter
+       heroku create todo-ankush
+       to ek project apka create ho jayega 
+        
